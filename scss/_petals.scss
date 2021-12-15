@@ -1,0 +1,136 @@
+.petal{
+    &-1{
+        top: 15.5%;
+        right: 25%;
+        transform: scale(0.8);
+    }
+    &-2{
+        top: 17.5%;
+        left: 29%;
+    }
+    &-3{
+        top: 19%;
+        left: 38%;
+        z-index: -3;
+        transform: scale(1.1);
+    }
+    &-4{
+        top: 20.25%;
+        left: 39%;
+        transform: scale(0.8);
+    }
+    &-5{
+        top: 20%;
+        left: 36%;
+        z-index: -1;
+    }
+    &-6{
+        top: 20.75%;
+        left: 33%;
+        z-index: -2;
+    }
+    &-7{
+        top: 21.75%;
+        left: 37%;
+        z-index: -2;
+        transform: scale(0.75);
+    }
+    &-8{
+        top: 21%;
+        left: 41%;
+        transform: scale(1.1);
+    }
+    &-9{
+        top: 22%;
+        left: 39.5%;
+        z-index: -1;
+    }
+    &-10{
+        top: 21.25%;
+        left: 44%;
+        z-index: -1;
+    }
+    &-11{
+        top: 21.75%;
+        left: 49%;
+        z-index: -2;
+    }
+    &-12{
+        top: 22%;
+        left: 51%;
+    }
+    &-13{
+        top: 21.75%;
+        left: 53%;
+        z-index: -1;
+    }
+    &-14{
+        top: 20.5%;
+        left: 54.75%;
+        z-index: -2;
+    }
+    &-15{
+        top: 21.5%;
+        left: 56.5%;
+    }
+    &-16{
+        top: 20%;
+        left: 54%;
+        z-index: -3;
+    }
+    &-17{
+        top: 21.5%;
+        left: 60%;
+        z-index: -4;
+    }
+    &-18{
+        top: 21%;
+        left: 70%;
+        transform: rotate(-180deg);
+        z-index: -1;
+    }
+    &-19{
+        top: 21.75%;
+        left: 69.5%;
+        z-index: -2;
+    }
+    &-20{
+        top: 21.25%;
+        left: 69%;
+        transform: scale(0.9);
+    }
+    &-21{
+        top: 22%;
+        left: 79%;
+        transform: scale(0.8);
+    }
+    &-22{
+        top: 21.5%;
+        left: 23%;
+        transform: scale(0.8);
+    }
+    &-23{
+        top: 22%;
+        left: 22%;
+        transform: scale(0.8);
+    }
+    &-24{
+        top: 23%;
+        left: 20%;
+        transform: scale(0.85);
+    }
+    &-25{
+        top: 7rem;
+        left: -6rem;
+    }
+    &-26{ top: 9rem; }
+    &-27{
+        top: -7rem;
+        left: 8rem;
+    }
+    &-28{
+        top: -4rem;
+        left: 7rem;
+    }
+    &-29{ transform: scale(0.9); }
+}

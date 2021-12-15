@@ -1,0 +1,49 @@
+.footer{
+    height: 55vh;
+    margin-top: 13rem;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(3,1fr) 20%;
+
+    &_background{
+        background-color: $light-rose;
+        grid-area: 1/1/4/12;
+        display: flex;
+    }
+    &_petals-1{
+        grid-area: 3/2/4/3;
+        position: relative;
+    }
+    &_petals-2{
+        grid-area: 3/11/4/12;
+        position: relative;
+    }
+    &_header{
+        font-size: 1.8rem;
+        letter-spacing: 1.5px;
+        padding: 5rem;
+    }
+    &_social{ padding-left: 20rem; }
+    &_contact{ padding-left: 14rem; }
+    &_social,
+    &_contact{
+        padding-top: 6rem;
+    }
+    &_list{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding-left: 5rem;
+    }
+    &_item{
+        font-size: 1.6rem;
+        letter-spacing: 1.5px;
+        padding-top: 2rem;
+    }
+    &_text{ 
+        grid-area: 4/6/5/9; 
+        font-size: 1.4rem;
+        letter-spacing: 0.8px;
+        align-self: center;
+    }
+}

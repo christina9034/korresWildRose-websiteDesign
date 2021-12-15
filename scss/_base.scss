@@ -1,0 +1,98 @@
+$light-rose: #f8e0ce;
+$red: #830100;
+$gold: #C6B07D;
+$main: #fcfcfc;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background: $main;
+    position: relative;
+}
+
+@font-face {
+    font-family: Athene;
+    src: url("/fonts/Athene.otf");
+}
+
+.heading-1{
+    font-family: Athene;
+    font-size: 10rem;
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+.heading-2{
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.georgia{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text-red{ color: $red; }
+.text-gold{ 
+    color: $gold; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.text-1{
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+}
+.gold-circle{
+    border-radius: 50%;
+    border: 2px solid $gold;
+    height: 10rem;
+    width: 10.3rem;
+}
+.gold-arrow{
+    height: 13rem;
+    width: 2px;
+    background-color: $gold;
+    position: absolute;
+    top: -14px;
+    left: 24px;
+
+    &::before{
+        content: "";
+        width: 2px;
+        height: 30px;
+        background-color: $gold;
+        position: absolute;
+        top: 12.5rem;
+        left: 12px;
+        transform: rotate(55deg);
+    }
+    &::after{
+        content: "";
+        width: 2px;
+        height: 30px;
+        background-color: $gold;
+        position: absolute;
+        top: 12.5rem;
+        left: -10px;
+        transform: rotate(305deg);
+    }
+}
+.gold-line{
+    height: 13rem;
+    width: 2px;
+    background-color: $gold;
+    top: -14px;
+    right: 24px;
+
+    &--big{
+        height: 1px;
+        width: 100%;
+        background-color: $gold;
+        grid-area: 8/1/9/13;
+        align-self: flex-end;
+    }
+}
+
+.pos-abs{ position: absolute; }

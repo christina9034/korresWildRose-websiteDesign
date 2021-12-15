@@ -1,0 +1,351 @@
+@import "_base";
+@import "_petals";
+@import "_products";
+@import "_footer";
+
+.main{
+    display: grid;
+    grid-template-columns: 6% 4% repeat(9, 10%);
+    grid-template-rows: repeat(10, 10%);
+    height: 100vh;
+    width: 100%;
+
+    &_logo{
+        grid-area: 1/6/2/7;
+    }
+
+    &_rose-img{
+        grid-area: 1/11/2/12;
+        width: 50%;
+    }
+
+    &_background{
+        background-color: $light-rose;
+        grid-area: 2/2/11/12;
+        z-index: -100;
+    }
+
+    &_header{
+        grid-area: 4/3/5/11;
+        margin-top: -2rem;
+    }
+
+    &_second-header{
+        grid-area: 5/6/6/12; 
+        margin: 5rem 7rem;
+    }
+    &_product{
+        grid-area: 7/4/11/9;
+        position: relative;
+
+        &--img{
+            top: 6%;
+            left: 41%;
+            z-index: -2;
+        }
+    }
+    &_cta{
+        top: 16%;
+        left: 4.6%;
+
+        &-text{
+            top: 46%;
+            left: 35%;
+        }
+    }
+    &_second-cta{
+        top: 20%;
+        right: 0;
+       
+        &--text{
+            top: 42%;
+            left: -7px;
+        }
+    }
+}
+
+.ingredients{
+    height: 110vh;
+    display: grid;
+    grid-template-columns: repeat(12,8%);
+    grid-template-rows: repeat(8,1fr);
+    background: linear-gradient(to bottom, rgba(252,252,252,0.5),rgba(252,252,252,0.5)),
+                url("/img/rose-linear-gold-png.png");
+    
+    &_info{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-around;
+        background-color: $light-rose;
+        grid-area: 2/5/8/9;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.5s ease-in-out;
+
+        &--reveal{
+            opacity: 1;
+            transform: none;
+        }
+    }
+    &_header{
+        font-size: 3.2rem;
+        font-family: Athene;
+        letter-spacing: 7px;
+        margin: 5rem auto;
+    }
+    &_text{
+        font-size: 1.6rem;
+        letter-spacing: 0.8px;
+        line-height: 2.2rem;
+        text-align: center;
+        padding: 0 5.5rem;
+    }
+    &_cta{
+        grid-area: 7/9/8/9;
+        position: relative;
+
+        &-text{
+            top: 3rem;
+            left: 10px;
+        }
+        &-circle{ left: -25px; }
+
+        &-line{
+            width: 2px;
+            height: 13rem;
+            background-color: $gold;
+            top: -15px;
+
+            &::before{
+                content: "";
+                position: absolute;
+                height: 3rem;
+                width: 2px;
+                background-color: $gold;
+                top: 12rem;
+                right: -12px;
+                transform: rotate(48deg);
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                height: 3rem;
+                width: 2px;
+                background-color: $gold;
+                top: 12rem;
+                left: -10px;
+                transform: rotate(311deg);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .heading-1{ font-size: 7rem; }
+    .heading-2, .ingredients_header{ font-size: 2.2rem; }
+    .text-1, .footer_header{ font-size: 1.4rem; }
+    .ingredients_text, .products_text, .footer_item, .footer_text{ font-size: 1.2rem; }
+}
+
+@media only screen and (max-width: 1024px) {
+    .main{ 
+        &_logo{
+            grid-area: 1/5/2/9; 
+            margin: 2rem auto;
+        }
+        &_header{ letter-spacing: 5px; }
+        &_second-header{
+            font-size: 2rem;
+            margin: 0 2rem;
+            line-height: 3rem;
+        }
+        &_cta{ left: 3%; }
+        &_product{ 
+            grid-area: 7/5/11/9; 
+            &--img{ 
+                left: 10%; 
+                top: 10%;
+            }
+        }
+    }
+
+    .ingredients{
+        grid-template-columns: repeat(10,10%);
+
+        &_info{ grid-area: 2/3/8/9; }
+        &_text{
+            padding: 4rem 12rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    .products{
+        &_drag-circle{ left: 34%; }
+    }
+
+    .footer{
+        grid-template-columns: repeat(8,1fr);
+
+        &_background{ grid-area: 1/1/4/8; }
+        &_petals-2{ grid-area: 3/7/4/8; }
+        &_text{ grid-area: 4/4/5/6; }
+    }
+    .pr-hidden{ display: none; }
+}
+
+@media only screen and (max-width: 805px) {
+    html{ font-size: 56%; }
+    .main{
+        &_logo{ width: 80%; }
+        &_rose-img{ width: 100% }
+        &_header{ 
+            font-size: 6rem;
+            letter-spacing: 3px;
+        }
+        &_second-header{
+            font-size: 2rem;
+            margin-top: 4rem;
+        }
+        &_second-cta{ top: 18%; }
+        &_product--img{
+            top: 0;
+            left: 0;
+        }
+    }
+    .footer{
+        grid-template-columns: repeat(3,33%);
+
+        &_background{ grid-area: 1/1/4/4; }
+        &_social{ padding: 4rem; }
+        &_contact{ padding: 4rem 0; }
+        &_petals-1{ grid-area: 3/1/4/2; }
+        &_petals-2{ grid-area: 3/3/4/4; }
+        &_text{
+            justify-self: center;
+            grid-area: 4/2/5/3;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gold-circle{
+        width: 8.3rem;
+        height: 8rem;
+    }
+    .main{
+        &_rose-img{
+            width: 75%;
+            justify-self: center;
+            grid-area: 1/10/2/12;
+        }
+        &_header{ 
+            font-size: 4rem;
+            grid-area: 3/3/5/12;
+        }
+        &_second-header{ grid-area: 4/2/6/12; }
+        &_main-cta{
+            left: 0%;
+            top: 14%;
+        }
+        &_product{ 
+            grid-area: 7/3/10/5;
+                &--img{ transform: scale(0.7); }
+        }
+    }
+    
+    .ingredients{
+        grid-template-columns: repeat(3,33%);
+        
+        &_info{
+            grid-area: 2/1/8/4;
+            margin: 0 5rem;
+        }
+        &_text{ 
+            padding: 1rem 5rem;
+            font-size: 1rem;
+         }
+        &_cta{
+            grid-area: 7/3/8/4;
+            margin-top: 7rem;
+
+            &-text{ 
+                line-height: 2rem;
+                font-size: 1.2rem;
+            }
+            &-circle{ left: 6rem; }
+            &-line{
+                height: 10rem;
+                top: -7px;
+                left: 10rem;
+
+                &::after,
+                &::before{
+                    height: 2rem;
+                    top: 10rem;
+                }
+                &::before{ right: -7px; }
+                &::after{ left: -7px; }
+            }
+        }
+    }
+
+    .products{
+        &_drag{
+            &-circle{ 
+                left: 28%; 
+            
+                &--text{ margin: 4rem 1.6rem; }
+            }
+            &-big-line{
+                width: 100%;
+                left: -8%;
+            }
+        }
+    }
+
+    .footer{
+        & img{ transform: scale(0.5); }
+        &_background{ margin-right: 5rem; }
+        &_social{ 
+            padding: 4rem 1rem; 
+
+            & ul{ padding-left: 3rem; }
+        }
+        &_header{ padding: 3rem; }
+        &_contact{
+            padding: 4rem 0;
+
+            & ul{ padding: 1rem 3rem; }
+        }
+    }
+    .petal-21{
+        transform: scale(0.5);
+        left: 63%;
+    }
+    .petal-14{ transform: scale(0.5); }
+    .petal-25{ left: -3rem; }
+    .petal-27{
+        top: -3rem;
+        left: 1rem;
+    }
+    .petal-28{
+        top: -3rem;
+        left: 0;
+    }
+
+    .gold-arrow{
+        height: 11.5rem;
+        left: 14px;
+
+        &::before,
+        &::after{
+            height: 20px;
+            top: 11.5rem;
+        }
+
+        &::before{ left: 9px; }
+        &::after{ left: -8px; }
+    }
+    .gold-line{ height: 11.5rem; }
+}

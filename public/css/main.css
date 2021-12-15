@@ -1,0 +1,595 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #fcfcfc;
+  position: relative; }
+
+@font-face {
+  font-family: Athene;
+  src: url("/fonts/Athene.otf"); }
+
+.heading-1 {
+  font-family: Athene;
+  font-size: 10rem;
+  font-weight: 100;
+  letter-spacing: 10px; }
+
+.heading-2 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 3px; }
+
+.georgia {
+  font-family: Georgia, 'Times New Roman', Times, serif; }
+
+.text-red {
+  color: #830100; }
+
+.text-gold {
+  color: #C6B07D;
+  font-family: Georgia, 'Times New Roman', Times, serif; }
+
+.text-1 {
+  letter-spacing: 1px;
+  font-size: 1.6rem; }
+
+.gold-circle {
+  border-radius: 50%;
+  border: 2px solid #C6B07D;
+  height: 10rem;
+  width: 10.3rem; }
+
+.gold-arrow {
+  height: 13rem;
+  width: 2px;
+  background-color: #C6B07D;
+  position: absolute;
+  top: -14px;
+  left: 24px; }
+  .gold-arrow::before {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #C6B07D;
+    position: absolute;
+    top: 12.5rem;
+    left: 12px;
+    transform: rotate(55deg); }
+  .gold-arrow::after {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #C6B07D;
+    position: absolute;
+    top: 12.5rem;
+    left: -10px;
+    transform: rotate(305deg); }
+
+.gold-line {
+  height: 13rem;
+  width: 2px;
+  background-color: #C6B07D;
+  top: -14px;
+  right: 24px; }
+  .gold-line--big {
+    height: 1px;
+    width: 100%;
+    background-color: #C6B07D;
+    grid-area: 8/1/9/13;
+    align-self: flex-end; }
+
+.pos-abs {
+  position: absolute; }
+
+.petal-1 {
+  top: 15.5%;
+  right: 25%;
+  transform: scale(0.8); }
+
+.petal-2 {
+  top: 17.5%;
+  left: 29%; }
+
+.petal-3 {
+  top: 19%;
+  left: 38%;
+  z-index: -3;
+  transform: scale(1.1); }
+
+.petal-4 {
+  top: 20.25%;
+  left: 39%;
+  transform: scale(0.8); }
+
+.petal-5 {
+  top: 20%;
+  left: 36%;
+  z-index: -1; }
+
+.petal-6 {
+  top: 20.75%;
+  left: 33%;
+  z-index: -2; }
+
+.petal-7 {
+  top: 21.75%;
+  left: 37%;
+  z-index: -2;
+  transform: scale(0.75); }
+
+.petal-8 {
+  top: 21%;
+  left: 41%;
+  transform: scale(1.1); }
+
+.petal-9 {
+  top: 22%;
+  left: 39.5%;
+  z-index: -1; }
+
+.petal-10 {
+  top: 21.25%;
+  left: 44%;
+  z-index: -1; }
+
+.petal-11 {
+  top: 21.75%;
+  left: 49%;
+  z-index: -2; }
+
+.petal-12 {
+  top: 22%;
+  left: 51%; }
+
+.petal-13 {
+  top: 21.75%;
+  left: 53%;
+  z-index: -1; }
+
+.petal-14 {
+  top: 20.5%;
+  left: 54.75%;
+  z-index: -2; }
+
+.petal-15 {
+  top: 21.5%;
+  left: 56.5%; }
+
+.petal-16 {
+  top: 20%;
+  left: 54%;
+  z-index: -3; }
+
+.petal-17 {
+  top: 21.5%;
+  left: 60%;
+  z-index: -4; }
+
+.petal-18 {
+  top: 21%;
+  left: 70%;
+  transform: rotate(-180deg);
+  z-index: -1; }
+
+.petal-19 {
+  top: 21.75%;
+  left: 69.5%;
+  z-index: -2; }
+
+.petal-20 {
+  top: 21.25%;
+  left: 69%;
+  transform: scale(0.9); }
+
+.petal-21 {
+  top: 22%;
+  left: 79%;
+  transform: scale(0.8); }
+
+.petal-22 {
+  top: 21.5%;
+  left: 23%;
+  transform: scale(0.8); }
+
+.petal-23 {
+  top: 22%;
+  left: 22%;
+  transform: scale(0.8); }
+
+.petal-24 {
+  top: 23%;
+  left: 20%;
+  transform: scale(0.85); }
+
+.petal-25 {
+  top: 7rem;
+  left: -6rem; }
+
+.petal-26 {
+  top: 9rem; }
+
+.petal-27 {
+  top: -7rem;
+  left: 8rem; }
+
+.petal-28 {
+  top: -4rem;
+  left: 7rem; }
+
+.petal-29 {
+  transform: scale(0.9); }
+
+.products {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 2fr); }
+  .products_rose-image {
+    grid-area: 1/6/3/8;
+    align-self: center;
+    justify-self: center; }
+  .products_container {
+    grid-area: 4/2/11/12;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center; }
+  .products_text {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    text-align: center; }
+  .products_item {
+    border: 2px solid #C6B07D;
+    border-radius: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+  .products_img {
+    width: 90%;
+    align-self: center;
+    justify-self: center; }
+  .products_drag {
+    grid-area: 12/4/13/11;
+    margin-top: 5.5rem;
+    position: relative; }
+    .products_drag-big-line {
+      height: 2px;
+      width: 85%;
+      background-color: #C6B07D; }
+    .products_drag-small-line {
+      height: 4px;
+      width: 30%;
+      background-color: #C6B07D;
+      top: -1px;
+      left: 28%; }
+    .products_drag-circle {
+      top: -3rem;
+      left: 38%; }
+      .products_drag-circle--text {
+        margin: 4rem 2.5rem; }
+
+.footer {
+  height: 55vh;
+  margin-top: 13rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr) 20%; }
+  .footer_background {
+    background-color: #f8e0ce;
+    grid-area: 1/1/4/12;
+    display: flex; }
+  .footer_petals-1 {
+    grid-area: 3/2/4/3;
+    position: relative; }
+  .footer_petals-2 {
+    grid-area: 3/11/4/12;
+    position: relative; }
+  .footer_header {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    padding: 5rem; }
+  .footer_social {
+    padding-left: 20rem; }
+  .footer_contact {
+    padding-left: 14rem; }
+  .footer_social, .footer_contact {
+    padding-top: 6rem; }
+  .footer_list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-left: 5rem; }
+  .footer_item {
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+    padding-top: 2rem; }
+  .footer_text {
+    grid-area: 4/6/5/9;
+    font-size: 1.4rem;
+    letter-spacing: 0.8px;
+    align-self: center; }
+
+.main {
+  display: grid;
+  grid-template-columns: 6% 4% repeat(9, 10%);
+  grid-template-rows: repeat(10, 10%);
+  height: 100vh;
+  width: 100%; }
+  .main_logo {
+    grid-area: 1/6/2/7; }
+  .main_rose-img {
+    grid-area: 1/11/2/12;
+    width: 50%; }
+  .main_background {
+    background-color: #f8e0ce;
+    grid-area: 2/2/11/12;
+    z-index: -100; }
+  .main_header {
+    grid-area: 4/3/5/11;
+    margin-top: -2rem; }
+  .main_second-header {
+    grid-area: 5/6/6/12;
+    margin: 5rem 7rem; }
+  .main_product {
+    grid-area: 7/4/11/9;
+    position: relative; }
+    .main_product--img {
+      top: 6%;
+      left: 41%;
+      z-index: -2; }
+  .main_cta {
+    top: 16%;
+    left: 4.6%; }
+    .main_cta-text {
+      top: 46%;
+      left: 35%; }
+  .main_second-cta {
+    top: 20%;
+    right: 0; }
+    .main_second-cta--text {
+      top: 42%;
+      left: -7px; }
+
+.ingredients {
+  height: 110vh;
+  display: grid;
+  grid-template-columns: repeat(12, 8%);
+  grid-template-rows: repeat(8, 1fr);
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.5), rgba(252, 252, 252, 0.5)), url("/img/rose-linear-gold-png.png"); }
+  .ingredients_info {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    background-color: #f8e0ce;
+    grid-area: 2/5/8/9;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease-in-out; }
+    .ingredients_info--reveal {
+      opacity: 1;
+      transform: none; }
+  .ingredients_header {
+    font-size: 3.2rem;
+    font-family: Athene;
+    letter-spacing: 7px;
+    margin: 5rem auto; }
+  .ingredients_text {
+    font-size: 1.6rem;
+    letter-spacing: 0.8px;
+    line-height: 2.2rem;
+    text-align: center;
+    padding: 0 5.5rem; }
+  .ingredients_cta {
+    grid-area: 7/9/8/9;
+    position: relative; }
+    .ingredients_cta-text {
+      top: 3rem;
+      left: 10px; }
+    .ingredients_cta-circle {
+      left: -25px; }
+    .ingredients_cta-line {
+      width: 2px;
+      height: 13rem;
+      background-color: #C6B07D;
+      top: -15px; }
+      .ingredients_cta-line::before {
+        content: "";
+        position: absolute;
+        height: 3rem;
+        width: 2px;
+        background-color: #C6B07D;
+        top: 12rem;
+        right: -12px;
+        transform: rotate(48deg); }
+      .ingredients_cta-line::after {
+        content: "";
+        position: absolute;
+        height: 3rem;
+        width: 2px;
+        background-color: #C6B07D;
+        top: 12rem;
+        left: -10px;
+        transform: rotate(311deg); }
+
+@media only screen and (max-width: 1400px) {
+  .heading-1 {
+    font-size: 7rem; }
+  .heading-2, .ingredients_header {
+    font-size: 2.2rem; }
+  .text-1, .footer_header {
+    font-size: 1.4rem; }
+  .ingredients_text, .products_text, .footer_item, .footer_text {
+    font-size: 1.2rem; } }
+
+@media only screen and (max-width: 1024px) {
+  .main_logo {
+    grid-area: 1/5/2/9;
+    margin: 2rem auto; }
+  .main_header {
+    letter-spacing: 5px; }
+  .main_second-header {
+    font-size: 2rem;
+    margin: 0 2rem;
+    line-height: 3rem; }
+  .main_cta {
+    left: 3%; }
+  .main_product {
+    grid-area: 7/5/11/9; }
+    .main_product--img {
+      left: 10%;
+      top: 10%; }
+  .ingredients {
+    grid-template-columns: repeat(10, 10%); }
+    .ingredients_info {
+      grid-area: 2/3/8/9; }
+    .ingredients_text {
+      padding: 4rem 12rem;
+      line-height: 2.5rem; }
+  .products_drag-circle {
+    left: 34%; }
+  .footer {
+    grid-template-columns: repeat(8, 1fr); }
+    .footer_background {
+      grid-area: 1/1/4/8; }
+    .footer_petals-2 {
+      grid-area: 3/7/4/8; }
+    .footer_text {
+      grid-area: 4/4/5/6; }
+  .pr-hidden {
+    display: none; } }
+
+@media only screen and (max-width: 805px) {
+  html {
+    font-size: 56%; }
+  .main_logo {
+    width: 80%; }
+  .main_rose-img {
+    width: 100%; }
+  .main_header {
+    font-size: 6rem;
+    letter-spacing: 3px; }
+  .main_second-header {
+    font-size: 2rem;
+    margin-top: 4rem; }
+  .main_second-cta {
+    top: 18%; }
+  .main_product--img {
+    top: 0;
+    left: 0; }
+  .footer {
+    grid-template-columns: repeat(3, 33%); }
+    .footer_background {
+      grid-area: 1/1/4/4; }
+    .footer_social {
+      padding: 4rem; }
+    .footer_contact {
+      padding: 4rem 0; }
+    .footer_petals-1 {
+      grid-area: 3/1/4/2; }
+    .footer_petals-2 {
+      grid-area: 3/3/4/4; }
+    .footer_text {
+      justify-self: center;
+      grid-area: 4/2/5/3; } }
+
+@media only screen and (max-width: 480px) {
+  .gold-circle {
+    width: 8.3rem;
+    height: 8rem; }
+  .main_rose-img {
+    width: 75%;
+    justify-self: center;
+    grid-area: 1/10/2/12; }
+  .main_header {
+    font-size: 4rem;
+    grid-area: 3/3/5/12; }
+  .main_second-header {
+    grid-area: 4/2/6/12; }
+  .main_main-cta {
+    left: 0%;
+    top: 14%; }
+  .main_product {
+    grid-area: 7/3/10/5; }
+    .main_product--img {
+      transform: scale(0.7); }
+  .ingredients {
+    grid-template-columns: repeat(3, 33%); }
+    .ingredients_info {
+      grid-area: 2/1/8/4;
+      margin: 0 5rem; }
+    .ingredients_text {
+      padding: 1rem 5rem;
+      font-size: 1rem; }
+    .ingredients_cta {
+      grid-area: 7/3/8/4;
+      margin-top: 7rem; }
+      .ingredients_cta-text {
+        line-height: 2rem;
+        font-size: 1.2rem; }
+      .ingredients_cta-circle {
+        left: 6rem; }
+      .ingredients_cta-line {
+        height: 10rem;
+        top: -7px;
+        left: 10rem; }
+        .ingredients_cta-line::after, .ingredients_cta-line::before {
+          height: 2rem;
+          top: 10rem; }
+        .ingredients_cta-line::before {
+          right: -7px; }
+        .ingredients_cta-line::after {
+          left: -7px; }
+  .products_drag-circle {
+    left: 28%; }
+    .products_drag-circle--text {
+      margin: 4rem 1.6rem; }
+  .products_drag-big-line {
+    width: 100%;
+    left: -8%; }
+  .footer img {
+    transform: scale(0.5); }
+  .footer_background {
+    margin-right: 5rem; }
+  .footer_social {
+    padding: 4rem 1rem; }
+    .footer_social ul {
+      padding-left: 3rem; }
+  .footer_header {
+    padding: 3rem; }
+  .footer_contact {
+    padding: 4rem 0; }
+    .footer_contact ul {
+      padding: 1rem 3rem; }
+  .petal-21 {
+    transform: scale(0.5);
+    left: 63%; }
+  .petal-14 {
+    transform: scale(0.5); }
+  .petal-25 {
+    left: -3rem; }
+  .petal-27 {
+    top: -3rem;
+    left: 1rem; }
+  .petal-28 {
+    top: -3rem;
+    left: 0; }
+  .gold-arrow {
+    height: 11.5rem;
+    left: 14px; }
+    .gold-arrow::before, .gold-arrow::after {
+      height: 20px;
+      top: 11.5rem; }
+    .gold-arrow::before {
+      left: 9px; }
+    .gold-arrow::after {
+      left: -8px; }
+  .gold-line {
+    height: 11.5rem; } }
